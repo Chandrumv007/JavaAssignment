@@ -29,13 +29,34 @@ public class UserServiceImpl implements UserDetailsService  {
 		return (List<User>) dao.findAll();
 		
 	}
-	public User getData(int id) {
-		return dao.findByUserId(id);
+	public User getData(String name) {
+		return dao.findByUserName(name);
+		
+	}
+	public boolean deleteUser(int id) {
+		User user = dao.findByUserId(id);
+		if(user!=null) {
+		 dao.deleteById(id);
+		 return true;
+		}
+		else return false;
+		
+	}
+	public User getByUserName(String name) {
+		return dao.findByUserName(name);
 		
 	}
 	public User saveData(User user) {
 		return dao.save(user);
 
 	}
+	public boolean saveData1(User user) {
+		User user1 = dao.save(user);
+		if(user1!=null) {
+			return true;
+		}else return false;
+
+	}
+
 
 }

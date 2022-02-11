@@ -42,19 +42,30 @@ body{
 
 
       <div class="form1">
-        <label for="userId">User Id</label>
-        <input type="number" class="form-control"   placeholder="199" name="UserId">
+        <label >User Id</label>
+        <input type="number" class="form-control"    name="UserId">
       </div>
       <div class="form1">
-        <label for="userName">User Name</label>
-        <input type="text" class="form-control" onkeypress="return /[a-z]/i.test(event.key)" placeholder="Mark" name="userName">
+        <label>Name</label>
+        <input type="text" class="form-control"  name="userRealName" onkeypress="return /[a-z]/i.test(event.key)" >
       </div>
-  
-      
+      <div class="form1">
+        <label>Age</label>
+        <input type="number" class="form-control"  name="userAge">
+      </div>
+      <div class="form1">
+        <label>Address</label>
+        <input type="text" class="form-control"  name="userAddress">
+      </div>
+      <div class="form1">
+        <label>User Name</label>
+        <input type="text" class="form-control"  name="userName">
+      </div>
       <div class="form1">
         <label for="userPassword">Password</label>
         <input type="password" class="form-control" placeholder="password" name="userPassword">
       </div>
+      
       
       <div class="form1">
         <label for="role">Role</label> <br>
@@ -66,18 +77,9 @@ body{
 
       <div class="col-auto my-1 form1">
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button  class="btn btn-secondary" onclick="reset()">Reset</button>
-
       </div>
     </form>
-
   </div>
-
-  <script>
-  function reset(){
-		form.reset();
-		
-	}</script>  
 </body>
 
 </html>

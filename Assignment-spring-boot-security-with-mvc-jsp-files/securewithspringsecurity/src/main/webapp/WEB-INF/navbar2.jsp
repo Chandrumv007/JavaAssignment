@@ -83,7 +83,7 @@ nav.stroke ul li a:hover:after {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stroke</title>
+    <title>home</title>
     <link rel="stylesheet" href="style.css">
   </head>
   
@@ -91,12 +91,11 @@ nav.stroke ul li a:hover:after {
 
   <nav class="stroke">
     <ul>
-      <li><a href="/user">Home</a></li>
+      <li><a href="/admin">Home</a></li>
       <li><a href="./seeAll">See All UserDetails</a> </li>
-      <li><a href="./seeById">See By UserId</a></li>
+      <li><a href="./delete">Delete User</a></li>
       <li><a href="./logout">Logout</a></li>
     </ul>
-    
  </nav>
 </body>
 </html>

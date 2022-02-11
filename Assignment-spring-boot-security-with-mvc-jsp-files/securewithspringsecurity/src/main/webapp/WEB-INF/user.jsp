@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@include file="navbar.jsp" %>
+      <% String name=(String) request.getAttribute("name");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,6 @@
 <title>Home</title>
 </head>
 <body>
-<h1>Welcome User To Home Page</h1>
+<h1 align="center">Welcome <%=name %> To Home Page</h1>
 </body>
 </html>

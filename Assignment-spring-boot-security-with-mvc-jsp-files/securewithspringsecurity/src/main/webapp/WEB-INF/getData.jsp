@@ -1,10 +1,9 @@
 <%@page import="com.te.securewithspringsecurity.dto.User"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@include file="navbar.jsp"%>
 <%
-List<User> data =(List<User>) request.getAttribute("users");
+User data =(User) request.getAttribute("user");
 %>
 <!DOCTYPE html>
 <html>
@@ -24,22 +23,23 @@ table,td,th,tr{
 <tr>
  <th>Id</th> 
  <th>Name</th> 
- <th>Password</th> 
+ <th>Age</th> 
+ <th>Address</th> 
+ <th>User Name</th> 
+ <th>User Password</th>
   <th>Role</th> 
 
 </tr>
-<%
-	for (User list : data) {
-	%>
 	<tr>
-	<td><%=list.getUserId()%></td>
-	<td><%=list.getUserName()%></td>
-	<td><%=list.getUserPassword()%></td>
-	<td><%=list.getUserRole()%></td>
+	<td><%=data.getUserId()%></td>
+	<td><%=data.getUserRealName()%></td>
+	<td><%=data.getUserAge()%></td>
+	<td><%=data.getUserAddress()%></td>
+	<td><%=data.getUserName()%></td>
+	<td><%=data.getUserPassword()%></td>
+	<td><%=data.getUserRole()%></td>
 	</tr>
-	<%
-	}
-	%>
+
 </table>
 	
 </body>

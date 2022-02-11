@@ -1,16 +1,16 @@
-
 <%@page import="com.te.securewithspringsecurity.dto.User"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-        <%@include file="navbar.jsp"%>
+    <%@include file="navbar2.jsp"%>
 <%
-User data =(User) request.getAttribute("user");
+List<User> data =(List<User>) request.getAttribute("users");
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User Details</title>
+<title>All User Info</title>
 <style type="text/css">
 table,td,th,tr{
       border: 2px solid rgba(0,0,0,0.5);
@@ -19,32 +19,32 @@ table,td,th,tr{
 </style>
 </head>
 <body>
-<br>
-<br>
-<form action="./seeById" method="post">
-<label>Enter id</label>
-<input type="number" name="id">
-<input type="submit" value="Submit">
-</form>
-
-
-<%if(data!=null){ %>
 <h1>User Details</h1>
 <table>
 <tr>
  <th>Id</th> 
  <th>Name</th> 
- <th>Password</th> 
+ <th>Age</th> 
+ <th>Address</th> 
+ <th>User Name</th> 
   <th>Role</th> 
 
 </tr>
+<%
+	for (User list : data) {
+	%>
 	<tr>
-	<td><%=data.getUserId()%></td>
-	<td><%=data.getUserName()%></td>
-	<td><%=data.getUserPassword()%></td>
-	<td><%=data.getUserRole()%></td>
+	<td><%=list.getUserId()%></td>
+	<td><%=list.getUserRealName()%></td>
+	<td><%=list.getUserAge()%></td>
+	<td><%=list.getUserAddress()%></td>
+	<td><%=list.getUserName()%></td>
+	<td><%=list.getUserRole()%></td>
 	</tr>
+	<%
+	}
+	%>
 </table>
-	<%} %>
+	
 </body>
 </html>

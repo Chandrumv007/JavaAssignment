@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>home</title>
 <style type="text/css">
 
 
@@ -91,9 +91,9 @@ nav.stroke ul li a:hover:after {
 
   <nav class="stroke">
     <ul>
-      <li><a href="/admin">Home</a></li>
-      <li><a href="./seeAll">See All UserDetails</a> </li>
-      <li><a href="./seeById">See By UserId</a></li>
+      <li><a href="/user">Home</a></li>
+      <li><a href="./update">Update YourDetails</a> </li>
+      <li><a href="./seeu">See Your Details</a></li>
       <li><a href="./logout">Logout</a></li>
     </ul>
     

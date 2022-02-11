@@ -14,6 +14,9 @@ import lombok.Data;
 public class User implements Serializable {
 	@Id
 	private int userId;
+	private String userRealName;
+	private int userAge;
+	private String userAddress;
 	private String userName;
 	private String userPassword;
 	private String userRole;
